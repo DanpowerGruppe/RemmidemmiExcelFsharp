@@ -1,0 +1,9 @@
+source https://www.nuget.org/api/v2
+nuget FAKE
+nuget FSharp.Core
+nuget netoffice.excel
+nuget TopShelf.FSharp
+nuget Topshelf
+nuget SqlProvider
+nuget FSharp.Data
+nuget FSharp.Data.TypeProviders
