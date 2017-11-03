@@ -90,3 +90,8 @@ type Energyplant =
     Ibn : DateTime;
     Stilllegung : DateTime;
     Id : string}
+
+type Customers =
+  { City : string;
+    Address : string;
+    Companyname : string}

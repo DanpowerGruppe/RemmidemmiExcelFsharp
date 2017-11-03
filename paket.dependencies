@@ -7,3 +7,4 @@ nuget Topshelf
 nuget SqlProvider
 nuget FSharp.Data
 nuget FSharp.Data.TypeProviders
+nuget System.Data.SQLite.Core

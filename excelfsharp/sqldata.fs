@@ -14,6 +14,8 @@ open Db
 
 //***************** Variante a) - entity mapper ***********************//
 
+// MSSQL
+
 let mapEnergyPlant (dbRecord:Sql.dataContext.``dbo.EnmsSicht_KstEnergiezentraleEntity``) : Domain.Energyplant =
     { Bezeichnung = dbRecord.Bezeichnung
       Mandantbez = 
@@ -59,6 +61,19 @@ let mapEnergyPlant (dbRecord:Sql.dataContext.``dbo.EnmsSicht_KstEnergiezentraleE
           | None -> DateTime.MinValue
       Id = dbRecord.KstStelle  }
 
+// SQLite
+
+//let mapCustomers (dbRecord:SqlL.dataContext.``main.CustomersEntity``) : Domain.Customers =
+//    { City =  match dbRecord.City with
+//              | Some x -> x
+//              | None -> "City not existing"
+//      Address =     match dbRecord.Address with
+//                    | Some x -> x
+//                    | None -> "Address not existing"
+//      Companyname = dbRecord.CompanyName   }
+
+// MSSQL
+
 
 let getMasterdata () = 
   query {   for energyplants in db.Dbo.EnmsSichtKstEnergiezentrale do
@@ -66,7 +81,17 @@ let getMasterdata () =
   |> Seq.map mapEnergyPlant
   |> Seq.toArray
 
+// SQLite
+
+//let getMasterdataCustomers () = 
+//  query {   for customers in dbL.Main.Customers do
+//            select customers }
+//  |> Seq.map mapCustomers
+//  |> Seq.toArray
+
 //***************** Variante b) - convenience  method ***********************//
+
+// MSSQL
 
 let getEnergyplants () = 
   query {   for energyplants in db.Dbo.EnmsSichtKstEnergiezentrale do
@@ -74,6 +99,13 @@ let getEnergyplants () =
   |> Seq.map (fun x -> x.MapTo<Domain.Energyplant>())
   |> Seq.toArray
 
+// SQLite
+  
+//let getCustumers () = 
+//  query {   for customers in dbL.Main.Customers do
+//            select customers }
+//  |> Seq.map (fun x -> x.MapTo<Domain.Customers>())
+//  |> Seq.toArray
 
 
 //***************** Add Standard Filters ***********************//

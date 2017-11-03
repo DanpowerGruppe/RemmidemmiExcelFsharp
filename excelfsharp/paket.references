@@ -5,3 +5,4 @@ Topshelf
 SQLProvider
 FSharp.Data
 FSharp.Data.TypeProviders
+System.Data.SQLite.Core
