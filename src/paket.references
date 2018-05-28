@@ -1,8 +1,8 @@
 FSharp.Core
-netoffice.excel
+EPPlus.Core
 TopShelf.FSharp
 Topshelf
 SQLProvider
 FSharp.Data
 FSharp.Data.TypeProviders
-System.Data.SQLite.Core
+FSharp.Compiler.Tools

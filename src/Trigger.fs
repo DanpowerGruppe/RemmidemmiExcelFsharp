@@ -1,4 +1,4 @@
-module Excelfsharp.Trigger
+module ObjRepro.Trigger
 
 open System
 

@@ -1,4 +1,4 @@
-module Excelfsharp.Domain
+module ObjRepro.Domain
 
 open System  
 
@@ -9,12 +9,6 @@ type ReportIntervall =
     | Quarterly
     | Halfyearly
     | Yearly
-
-type ReportStatus =
-    | Productive
-    | Test
-
-let reportStatus = Test//Productive//Test//Productive
 
 let isWeek (date:DateTime) =
     let tomorrow = date.AddDays 1.
@@ -49,10 +43,7 @@ let matchTaskControl (reportIntervall:ReportIntervall) (date:DateTime)=
     | Halfyearly -> isHalfofYear date
     | Yearly -> isYear date
 
-let matchTimeSpan (reportStatus:ReportStatus) =
-     match reportStatus with
-     | Productive -> TimeSpan.FromDays 1.0
-     | Test -> TimeSpan.FromMinutes 1.0
+let matchTimeSpan = TimeSpan.FromMinutes 1.0
 
 
 type XLSReport =   
@@ -75,23 +66,7 @@ type XLSReport =
     ReportEnergyDataFieldList : string list
     ReportFinancialDataField : string}     
 
-
-type Energyplant =
-  { Bezeichnung : string;
-    Mandantbez : string;
-    Mandant : int16
-    UserFibuKostenstelle : string;
-    Strasse : string;
-    Hausnummer : int;
-    Plz : string;
-    Ort : string;
-    Bundesland : string ;
-    Inbetrieb : int16
-    Ibn : DateTime;
-    Stilllegung : DateTime;
-    Id : string}
-
-type Customers =
-  { City : string;
-    Address : string;
-    Companyname : string}
+type Country =
+  { Name : string;
+    Id : string;
+    RegionId : int}

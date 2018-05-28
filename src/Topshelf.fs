@@ -1,4 +1,4 @@
-module Excelfsharp.Program
+module ObjRepro.Program
 
 open System
 open System.Reflection
@@ -26,8 +26,8 @@ let main argv =
     true
   
   Service.Default
-  |> display_name "ExcelFsharp"
-  |> instance_name "ExcelFsharp"
+  |> display_name "ObjRepro"
+  |> instance_name "ObjRepro"
   |> with_start start
   |> with_stop stop
   |> run

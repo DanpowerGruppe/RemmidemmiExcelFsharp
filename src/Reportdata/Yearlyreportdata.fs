@@ -1,17 +1,12 @@
-module Excelfsharp.YearlyReportData
+module ObjRepro.YearlyReportData
 
-open System
-open System.Web
-open System.IO
-open NetOffice.ExcelApi
-open NetOffice.ExcelApi.Enums
 open Domain
 open UtilsReport
 
 let reportNewsYearlyReport = ["TestNews"]
 let yearint = 2017001
 let reportdataYearlyReport:XLSReport = { 
-        ReportName = "TestReport_" + matchReportIntervall Yearly
+        ReportName = "TestReport_"
         ReportTime = yearint.ToString()
         ReportIntervall = Yearly
         ReportTyp = "vertikal"

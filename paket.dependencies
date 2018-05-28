@@ -1,10 +1,12 @@
-source https://www.nuget.org/api/v2
-nuget FAKE
+source https://nuget.org/api/v2
+redirects: force
+nuget Fake prerelease
 nuget FSharp.Core
-nuget netoffice.excel
-nuget TopShelf.FSharp
-nuget Topshelf
+nuget EPPlus.Core
+nuget Topshelf prerelease
+nuget Topshelf.Fsharp
 nuget SqlProvider
-nuget FSharp.Data
+nuget FSharp.Data prerelease
 nuget FSharp.Data.TypeProviders
-nuget System.Data.SQLite.Core
+nuget System.Data.SqlClient
+nuget FSharp.Compiler.Tools

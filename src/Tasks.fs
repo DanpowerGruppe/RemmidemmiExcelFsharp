@@ -1,4 +1,4 @@
-module Excelfsharp.Tasks
+module ObjRepro.Tasks
 
 open System
 open System.IO
@@ -9,7 +9,7 @@ let refreshRate = TimeSpan.FromMilliseconds 500.
 type TaskMessage = 
     | CreateYearlyReports
 
-let yearlyreports () = YearlyReports.buildReport YearlyReportData.reportdataYearlyReport reportStatus
+let yearlyreports () = YearlyReports.buildReport YearlyReportData.reportdataYearlyReport
 
 let taskAgent = 
     Trigger.Agent.Start(fun agent ->
@@ -24,11 +24,8 @@ let taskAgent =
 
 let trigger = Trigger.createTrigger refreshRate taskAgent
 
-// let month = DateTime.Now.AddMonths(-1).ToString("MMMM")
 
 let createTasks () = 
-    // Trigger.RecurringTask(matchTimeSpan reportStatus, CreateYearlyReports)
-    // |> trigger.Post
     Trigger.SingleTask(DateTime.Now, CreateYearlyReports)
     |> trigger.Post
 

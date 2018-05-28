@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>  
+  <ItemGroup>
+    <Compile Include="Domain.fs" />
+    <Compile Include="Db.fs" />
+    <Compile Include="Sqldata.fs" />
+    <Compile Include="Utilsreport.fs" />
+    <Compile Include="Reportdata/Yearlyreportdata.fs" />
+    <Compile Include="Sheets/YearlyReportSheets/Testsheet.fs" />
+    <Compile Include="Sheets/Yearlyreports.fs" />
+    <Compile Include="Trigger.fs" />
+    <Compile Include="Tasks.fs" />
+    <Compile Include="Topshelf.fs" />
+  </ItemGroup>
+  <Import Project="..\.paket\Paket.Restore.targets" />
+</Project>

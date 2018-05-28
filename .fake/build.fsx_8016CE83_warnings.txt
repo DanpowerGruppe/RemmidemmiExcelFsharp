@@ -1,0 +1,17 @@
+build.fsx(19,31): warning FS0044: This construct is deprecated. Use Fake.IO instead (FAKE0001 - package: Fake.IO.FileSystem - member: Fake.IO.Path.getFullName)
+build.fsx(32,8): warning FS0044: This construct is deprecated. FAKE0001 Use the Fake.Core.Process module instead
+build.fsx(44,9): warning FS0044: This construct is deprecated. FAKE0001 Use the Fake.Core.Process module instead
+build.fsx(88,9): warning FS0044: This construct is deprecated. FAKE0001 Use the Fake.Core.Process module instead
+build.fsx(91,20): warning FS0044: This construct is deprecated. use nuget 'Fake.Core.Trace' instead (open Fake.Core and use 'Trace.')
+Fake.Core.BuildFailedException: Target 'BuildBackEnd' failed. ---> System.AggregateException: Mindestens ein Fehler ist aufgetreten. ---> System.Exception: dotnet build -r win10-x64 failed
+   bei Microsoft.FSharp.Core.PrintfModule.PrintFormatToStringThenFail@1645.Invoke(String message)
+   bei FSI_0005.Build.runDotnet(String workingDir, String args) in C:\Users\tforkmann\Documents\1_Programming\5_Präsentationen\RemmidemmiExample\build.fsx:Zeile 48.
+   bei FSI_0005.Build.clo@81-5.Invoke(TargetParameter _arg2) in C:\Users\tforkmann\Documents\1_Programming\5_Präsentationen\RemmidemmiExample\build.fsx:Zeile 82.
+   bei Fake.Core.TargetModule.runSimpleInternal(TargetContext context, Target target) in D:\a\1\s\src\app\Fake.Core.Target\Target.fs:Zeile 177.
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei Fake.Core.TargetModule.runInternal(Boolean singleTarget, Int32 parallelJobs, String targetName, FSharpList`1 args) in D:\a\1\s\src\app\Fake.Core.Target\Target.fs:Zeile 706.
+   bei Fake.Core.TargetModule.runOrDefault@818.Invoke(Boolean singleTarget, Int32 parallelJobs, FSharpList`1 arguments) in D:\a\1\s\src\app\Fake.Core.Target\Target.fs:Zeile 819.
+   bei Fake.Core.TargetModule.runWithDefault$cont@778-1(Boolean allowArgs, FSharpFunc`2 fDefault, FSharpMap`2 results, Unit unitVar) in D:\a\1\s\src\app\Fake.Core.Target\Target.fs:Zeile 808.
+   bei <StartupCode$FSI_0005>.$FSI_0005_Build$fsx.main@() in C:\Users\tforkmann\Documents\1_Programming\5_Präsentationen\RemmidemmiExample\build.fsx:Zeile 108.
+Stopped due to error
