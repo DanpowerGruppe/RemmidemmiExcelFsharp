@@ -1,8 +1,6 @@
 module ObjRepro.Tasks
 
 open System
-open System.IO
-open Domain
 
 let refreshRate = TimeSpan.FromMilliseconds 500.
 

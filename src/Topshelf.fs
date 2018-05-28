@@ -3,7 +3,6 @@ module ObjRepro.Program
 open System
 open System.Reflection
 open Topshelf
-open Topshelf.FSharpApi
 open Tasks
 
 [<assembly: AssemblyTitle("Sample Service")>]

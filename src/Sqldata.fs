@@ -1,13 +1,6 @@
 module ObjRepro.Sqldata
 
-open System
-open System.Web 
-open System.IO 
-open System.Data 
 open FSharp.Data.Sql
-open FSharp.Data.TypeProviders
-open FSharp.Reflection
-open System.Linq
 open Db
 
 //***************** Add Mappers ***********************//

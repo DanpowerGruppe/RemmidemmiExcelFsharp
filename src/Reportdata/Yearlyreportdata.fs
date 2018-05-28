@@ -1,7 +1,6 @@
 module ObjRepro.YearlyReportData
 
 open Domain
-open UtilsReport
 
 let reportNewsYearlyReport = ["TestNews"]
 let yearint = 2017001
@@ -17,10 +16,10 @@ let reportdataYearlyReport:XLSReport = {
         ReportMandantlist = "b"
         ReportSageendmsGroupJoin = "c"
         ReportSageendmsGroupUserJoin = "d"
-        ReportArea = "Energiezentralen;Biogasanlagen;Kraftwerke"
+        ReportArea = "Plants"
         ReportRecipient = "e"
         ReportDayOfDeadLine = "f"
-        ReportDataTypes = "Energetische Datenpunkte"
+        ReportDataTypes = "Data"
         ReportEnergyDataField = "g"
         ReportEnergyDataFieldList = ["h"]
         ReportFinancialDataField = "i"}
